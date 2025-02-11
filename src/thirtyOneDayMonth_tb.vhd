@@ -116,13 +116,12 @@ begin
             assert w_Y = '0' report "error on Nov" severity failure;
         w_sw <= x"C"; wait for 10 ns;
             assert w_Y = '1' report "error on Dec" severity failure;
-            -- Invalid test cases (out-of-range months)
         w_sw <= x"D"; wait for 10 ns;
-            assert w_Y = '0' report "Error: Invalid month 13" severity failure;
+            assert w_Y = '0' report "error 13" severity failure;
         w_sw <= x"E"; wait for 10 ns;
-            assert w_Y = '0' report "Error: Invalid month 14" severity failure;
+            assert w_Y = '0' report "error 14" severity failure;
         w_sw <= x"F"; wait for 10 ns;
-            assert w_Y = '0' report "Error: Invalid month 15" severity failure;
+            assert w_Y = '0' report "error 15" severity failure;
 
 		wait; -- wait forever
 	end process;	
